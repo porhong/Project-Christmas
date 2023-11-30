@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="row pt-5">
+      <div class="row t-6">
         <!-- Gift 1 -->
         <div
           class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slower animate__delay-5s"
@@ -65,29 +65,54 @@
           onclick='
           toggle_visibility("g-4"),
           Swal.fire({
-            html: `<div class="container">
-  <div class="row">
-    <div
-      class=" d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slower animate__delay-5s"
-    >
-      <div class="box">
-        <div class="box-body">
-          <div class="box-lid">
-            <div class="box-bowtie"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>`,
-            imageUrl: "",
-            imageHeight: 1500,
-            imageAlt: "A tall image"
-          });'
+            html: `
+            <div style="overflow: hidden;" class="container">
+            <div class="row">
+                <div
+                class=" d-flex justify-content-center animate__animated animate__bounce animate__infinite animate__slow"
+                >
+                <div style="padding:60px;"class="box">
+                    <div class="box-body">
+                    <img src="/L-04.svg" alt="" />
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>`,
+            background:"#00914b url(/BG-pop-03.svg)",
+            title:"សំណាងល្អ!!",
+            color:"#fff",
+            confirmButtonText:"បើកការដូរ",
+            confirmButtonColor:"#68a662",
+            showCancelButton:true,
+            cancelButtonText:"ផ្លាស់ប្ដូរ",
+            cancelButtonColor:"#faa43a"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    html: `
+                        <input type="tel" id="tel" class="swal2-input"  placeholder="លេខទូរស័ព្ទ" required>
+                    `,
+                    allowOutsideClick:false,
+                    imageUrl: "/bg-02.svg",
+                    imageHeight: 300,
+                    imageAlt: "A tall image",
+
+                }).then((result) => {
+            if (result.isConfirmed) {
+                toggle_visibility_enable("g-4")
+            }})
+            } else if (result.isDismissed) {
+                toggle_visibility_enable("g-4")
+            }})'
           class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-4s"
         >
           <div class="box">
             <div class="box-body">
+              <img src="/L-04.svg" alt="" />
               <div class="box-lid">
                 <div class="box-bowtie"></div>
               </div>
@@ -113,6 +138,11 @@
         var e = document.getElementById(id);
         e.style.visibility =
           e.style.visibility != "hidden" ? "hidden" : "visibility";
+      }
+      function toggle_visibility_enable(id) {
+        var e = document.getElementById(id);
+        e.style.visibility =
+          e.style.visibility == "hidden" ? "visible" : "visibility";
       }
     </script>
     <!-- ------------- -->

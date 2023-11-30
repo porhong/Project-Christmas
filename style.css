@@ -1,5 +1,6 @@
 body {
-  background: black;
+  background-image: url("bg-02.svg");
+  background-size: cover;
 }
 
 .box {
@@ -7,8 +8,8 @@ body {
 }
 .box::before {
   content: "";
-  width: 440px;
-  height: 440px;
+  width: 240px;
+  height: 240px;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -23,10 +24,10 @@ body {
   width: 200px;
   margin-top: 123.3333333333px;
   background-color: #cc231e;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(#762c2c, #ff0303);
+  background: linear-gradient(#cd2846, #ff304e);
 }
 .box-body .img {
   opacity: 0;
@@ -40,10 +41,10 @@ body {
   -webkit-animation: box-body 1s forwards ease-in-out;
   animation: box-body 1s forwards ease-in-out;
 } */
-.box-body:hover .img {
+.box-body img {
   opacity: 1;
-  z-index: 0;
-  transform: translateY(-157px);
+  z-index: 1000;
+  position: absolute;
 }
 .box-body:hover .box-lid {
   -webkit-animation: box-lid 1s forwards ease-in-out;
@@ -76,10 +77,10 @@ body {
   transform: translateX(-50%);
   bottom: 90%;
   height: 40px;
-  background-color: #cc231e;
+  background-color: #ff304e;
   height: 40px;
   width: 220px;
-  border-radius: 5%;
+  border-radius: 10%;
   box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
 }
 .box-lid::after {
@@ -91,7 +92,7 @@ body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 50px;
-  background: linear-gradient(#ffefa0, #fff);
+  background: linear-gradient(#ffd67f, #fff);
 }
 .box-bowtie {
   z-index: 1;
@@ -103,7 +104,7 @@ body {
   width: 83.3333333333px;
   height: 83.3333333333px;
   border: 16.6666666667px solid white;
-  border-radius: 50% 50% 0 50%;
+  border-radius: 80% 50% 0 50%;
   position: absolute;
   bottom: 99%;
   z-index: -1;
@@ -357,4 +358,7 @@ body {
 
 #g-4 {
   visibility: visible;
+}
+.t-6 {
+  padding-top: 20% !important;
 }
