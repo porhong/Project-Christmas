@@ -22,10 +22,93 @@
       <div class="row t-6">
         <!-- Gift 1 -->
         <div
-          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slower animate__delay-5s"
+          id="g-1"
+          onclick='
+          toggle_visibility("g-1"),
+          Swal.fire({
+            html: `
+            <div style="overflow: hidden;" class="container">
+            <div class="row">
+                <div
+                class=" d-flex justify-content-center animate__animated animate__bounce animate__infinite animate__slow"
+                >
+                <div style="padding:60px;"class="box">
+                    <div class="box-body">
+                    <img src="/L-01.svg" alt="" />
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>`,
+            title:"សំណាងល្អ!!",
+            color:"#fff",
+            confirmButtonText:"បើកការដូរ",
+            confirmButtonColor:"#68a662",
+            showCancelButton:true,
+            cancelButtonText:"ផ្លាស់ប្ដូរ",
+            cancelButtonColor:"#faa43a"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    html: `
+                    <div id="confetti-wrapper">
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                    </div>
+                        <img src="/L-01.svg" alt="">
+                        
+                    `,
+                    allowOutsideClick:false,
+                    color:"#fff",
+                    confirmButtonText:"ទទួលយករង្វាន់",
+                    confirmButtonColor:"#68a662",
+
+                }).then((result) => {
+            if (result.isConfirmed) {
+              const { value: tel } = Swal.fire({
+                input: "text",
+                inputPlaceholder: "លេខទូរស័ព្ទ",
+                color:"#fff",
+                inputAttributes:{ input: "number",required: "true",type:"tel",autocomplete:"off",pattern:"[0-9]{9,10}",autofocus:"true"},
+                validationMessage:"សូមបញ្ជូលលេខទូរស័ព្ទអោយបានត្រឹមត្រូវ",
+                title:"សូមបញ្ជូលលេខទូរស័ព្ទ",
+                confirmButtonText:"យល់ព្រម",
+                confirmButtonColor:"#68a662",
+                allowEscapeKey:false,
+                allowOutsideClick:false,
+                allowEnterKey:true,
+
+              }).then((result) => {
+            if (result.isConfirmed) {
+              Toast.fire({
+                icon: "success",
+                title: "ការទទួលយករង្វាន់ជោគជ័យ"
+              });
+                toggle_visibility_enable("g-1")
+            }});
+            }})
+            } else if (result.isDismissed) {
+                toggle_visibility_enable("g-1")
+            }})'
+          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-2s"
         >
           <div class="box">
             <div class="box-body">
+              <img class="lable-num" src="/L-01.svg" alt="" />
               <div class="box-lid">
                 <div class="box-bowtie"></div>
               </div>
@@ -35,10 +118,93 @@
         <!-- ----------- -->
         <!-- Gift 2 -->
         <div
-          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-2s"
+          id="g-2"
+          onclick='
+          toggle_visibility("g-2"),
+          Swal.fire({
+            html: `
+            <div style="overflow: hidden;" class="container">
+            <div class="row">
+                <div
+                class=" d-flex justify-content-center animate__animated animate__bounce animate__infinite animate__slow"
+                >
+                <div style="padding:60px;"class="box">
+                    <div class="box-body">
+                    <img src="/L-02.svg" alt="" />
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>`,
+            title:"សំណាងល្អ!!",
+            color:"#fff",
+            confirmButtonText:"បើកការដូរ",
+            confirmButtonColor:"#68a662",
+            showCancelButton:true,
+            cancelButtonText:"ផ្លាស់ប្ដូរ",
+            cancelButtonColor:"#faa43a"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    html: `
+                    <div id="confetti-wrapper">
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                    </div>
+                        <img src="/L-02.svg" alt="">
+                        
+                    `,
+                    allowOutsideClick:false,
+                    color:"#fff",
+                    confirmButtonText:"ទទួលយករង្វាន់",
+                    confirmButtonColor:"#68a662",
+
+                }).then((result) => {
+            if (result.isConfirmed) {
+              const { value: tel } = Swal.fire({
+                input: "text",
+                inputPlaceholder: "លេខទូរស័ព្ទ",
+                color:"#fff",
+                inputAttributes:{ input: "number",required: "true",type:"tel",autocomplete:"off",pattern:"[0-9]{9,10}",autofocus:"true"},
+                validationMessage:"សូមបញ្ជូលលេខទូរស័ព្ទអោយបានត្រឹមត្រូវ",
+                title:"សូមបញ្ជូលលេខទូរស័ព្ទ",
+                confirmButtonText:"យល់ព្រម",
+                confirmButtonColor:"#68a662",
+                allowEscapeKey:false,
+                allowOutsideClick:false,
+                allowEnterKey:true,
+
+              }).then((result) => {
+            if (result.isConfirmed) {
+              Toast.fire({
+                icon: "success",
+                title: "ការទទួលយករង្វាន់ជោគជ័យ"
+              });
+                toggle_visibility_enable("g-2")
+            }});
+            }})
+            } else if (result.isDismissed) {
+                toggle_visibility_enable("g-2")
+            }})'
+          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-3s"
         >
           <div class="box">
             <div class="box-body">
+              <img class="lable-num" src="/L-02.svg" alt="" />
               <div class="box-lid">
                 <div class="box-bowtie"></div>
               </div>
@@ -48,10 +214,93 @@
         <!-- ----------- -->
         <!-- Gift 3 -->
         <div
-          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-3s"
+          id="g-3"
+          onclick='
+          toggle_visibility("g-3"),
+          Swal.fire({
+            html: `
+            <div style="overflow: hidden;" class="container">
+            <div class="row">
+                <div
+                class=" d-flex justify-content-center animate__animated animate__bounce animate__infinite animate__slow"
+                >
+                <div style="padding:60px;"class="box">
+                    <div class="box-body">
+                    <img src="/L-03.svg" alt="" />
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>`,
+            title:"សំណាងល្អ!!",
+            color:"#fff",
+            confirmButtonText:"បើកការដូរ",
+            confirmButtonColor:"#68a662",
+            showCancelButton:true,
+            cancelButtonText:"ផ្លាស់ប្ដូរ",
+            cancelButtonColor:"#faa43a"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    html: `
+                    <div id="confetti-wrapper">
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                    </div>
+                        <img src="/L-03.svg" alt="">
+                        
+                    `,
+                    allowOutsideClick:false,
+                    color:"#fff",
+                    confirmButtonText:"ទទួលយករង្វាន់",
+                    confirmButtonColor:"#68a662",
+
+                }).then((result) => {
+            if (result.isConfirmed) {
+              const { value: tel } = Swal.fire({
+                input: "text",
+                inputPlaceholder: "លេខទូរស័ព្ទ",
+                color:"#fff",
+                inputAttributes:{ input: "number",required: "true",type:"tel",autocomplete:"off",pattern:"[0-9]{9,10}",autofocus:"true"},
+                validationMessage:"សូមបញ្ជូលលេខទូរស័ព្ទអោយបានត្រឹមត្រូវ",
+                title:"សូមបញ្ជូលលេខទូរស័ព្ទ",
+                confirmButtonText:"យល់ព្រម",
+                confirmButtonColor:"#68a662",
+                allowEscapeKey:false,
+                allowOutsideClick:false,
+                allowEnterKey:true,
+
+              }).then((result) => {
+            if (result.isConfirmed) {
+              Toast.fire({
+                icon: "success",
+                title: "ការទទួលយករង្វាន់ជោគជ័យ"
+              });
+                toggle_visibility_enable("g-3")
+            }});
+            }})
+            } else if (result.isDismissed) {
+                toggle_visibility_enable("g-3")
+            }})'
+          class="col-3 mt-5 d-flex justify-content-center animate__animated animate__headShake animate__infinite animate__slow animate__delay-1s"
         >
           <div class="box">
             <div class="box-body">
+              <img class="lable-num" src="/L-03.svg" alt="" />
               <div class="box-lid">
                 <div class="box-bowtie"></div>
               </div>
@@ -82,7 +331,6 @@
                 </div>
             </div>
             </div>`,
-            background:"#00914b url(/BG-pop-03.svg)",
             title:"សំណាងល្អ!!",
             color:"#fff",
             confirmButtonText:"បើកការដូរ",
@@ -94,16 +342,54 @@
             if (result.isConfirmed) {
                 Swal.fire({
                     html: `
-                        <input type="tel" id="tel" class="swal2-input"  placeholder="លេខទូរស័ព្ទ" required>
+
+                    <div id="confetti-wrapper">
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                      <div class="confetti"></div>
+                    </div>
+                    <img src="/L-04.svg" alt="">
+
+                    
                     `,
                     allowOutsideClick:false,
-                    imageUrl: "/bg-02.svg",
-                    imageHeight: 300,
-                    imageAlt: "A tall image",
+                    color:"#fff",
+                    confirmButtonText:"ទទួលយករង្វាន់",
+                    confirmButtonColor:"#68a662",
 
                 }).then((result) => {
             if (result.isConfirmed) {
+              const { value: tel } = Swal.fire({
+                input: "text",
+                inputPlaceholder: "លេខទូរស័ព្ទ",
+                color:"#fff",
+                inputAttributes:{ input: "number",required: "true",type:"tel",autocomplete:"off",pattern:"[0-9]{9,10}",autofocus:"true"},
+                validationMessage:"សូមបញ្ជូលលេខទូរស័ព្ទអោយបានត្រឹមត្រូវ",
+                title:"សូមបញ្ជូលលេខទូរស័ព្ទ",
+                confirmButtonText:"យល់ព្រម",
+                confirmButtonColor:"#68a662",
+                allowEscapeKey:false,
+                allowOutsideClick:false,
+                allowEnterKey:true,
+
+              }).then((result) => {
+            if (result.isConfirmed) {
+              Toast.fire({
+                icon: "success",
+                title: "ការទទួលយករង្វាន់ជោគជ័យ"
+              });
                 toggle_visibility_enable("g-4")
+            }});
             }})
             } else if (result.isDismissed) {
                 toggle_visibility_enable("g-4")
@@ -112,7 +398,7 @@
         >
           <div class="box">
             <div class="box-body">
-              <img src="/L-04.svg" alt="" />
+              <img class="lable-num" src="/L-04.svg" alt="" />
               <div class="box-lid">
                 <div class="box-bowtie"></div>
               </div>
@@ -144,6 +430,20 @@
         e.style.visibility =
           e.style.visibility == "hidden" ? "visible" : "visibility";
       }
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+
+      // Pop Style
     </script>
     <!-- ------------- -->
   </body>
